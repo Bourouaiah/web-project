@@ -1,0 +1,312 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+nav .logo-img {
+  padding-left: 30px;
+  width: 150px;
+}
+nav .links {
+  display: none;
+  gap: 20px;
+}
+nav .links a {
+  color: black;
+  font-weight: bold;
+}
+nav .links a:hover {
+  color: brown;
+}
+nav .shop-numbers {
+  display: none;
+  gap: 20px;
+  font-weight: 500;
+}
+nav .shop-numbers .fav {
+  display: flex;
+  gap: 3px;
+}
+nav .shop-numbers .card {
+  display: flex;
+  gap: 3px;
+}
+nav .menu-button {
+  display: block;
+  width: 50px;
+}
+nav .menu-button img {
+  width: 40px;
+  cursor: pointer;
+}
+nav .menu-links {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  background-color: brown;
+  width: 100%;
+  left: 0px;
+  top: -500%;
+  padding: 20px 0px;
+  transition: 0.5s ease;
+}
+nav .menu-links.active {
+  top: 100%;
+}
+nav .menu-links a {
+  color: white;
+  font-weight: bold;
+}
+@media (min-width: 767px) {
+  nav .links {
+    display: flex;
+  }
+  nav .shop-numbers {
+    display: flex;
+  }
+  nav .menu-button {
+    display: none;
+  }
+  nav .menu-links {
+    display: none;
+  }
+}
+.hero {
+  padding: 100px;
+  height: 70vh;
+  background-image: url("./images/hero-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+.hero div h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.hero div h2 {
+  font-size: 36px;
+}
+.hero div p {
+  margin: 20px 0px;
+  color: rgb(58, 57, 57);
+}
+.hero div button {
+  background-color: brown;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media (min-width: 767px) {
+  .hero div {
+    width: 40%;
+  }
+}
+
+.collection {
+  padding: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.collection .card {
+  text-align: center;
+}
+.collection img {
+  width: 100%;
+  margin: 20px 0px;
+}
+.collection button {
+  background-color: brown;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.products {
+  padding: 50px;
+}
+.products ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.products ul li {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.products ul li:hover {
+  background-color: brown;
+  color: white;
+}
+.products ul li.active {
+  background-color: brown;
+  color: white;
+  transition: 0.5 ease;
+}
+.products .diff-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.products .diff-products img {
+  width: 100%;
+}
+.products .diff-products .product {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.products .diff-products .text .add {
+  display: flex;
+  width: 100%;
+  gap: 2px;
+}
+.products .diff-products .text .add button {
+  width: 50%;
+  background-color: brown;
+  border: none;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.products .diff-products .text {
+  padding: 25px;
+}
+.products .diff-products .text .data {
+  margin-top: 20px;
+  text-align: center;
+}
+.products .diff-products .text .data h2 {
+  margin: 10px 0px;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 50px;
+  gap: 20px;
+}
+.services .service {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.services .service-img {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: rgba(126, 125, 125, 0.199);
+}
+footer {
+  padding: 50px;
+  background-color: rgba(128, 128, 128, 0.192);
+}
+footer .social-with-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .social-with-logo ul {
+  display: flex;
+  gap: 20px;
+}
+footer .social-with-logo ul a {
+  color: black;
+  font-weight: bold;
+}
+footer .social-with-logo img {
+  width: 150px;
+}
+footer .footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 50px 0px;
+  gap: 20px;
+}
+footer .footer-links h2 {
+  margin-bottom: 15px;
+}
+footer .footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .newsletter form {
+  margin-top: 15px;
+}
+footer .newsletter form input {
+  outline: none;
+  border: none;
+}
+footer .newsletter form button {
+  background-color: brown;
+  color: white;
+  border: none;
+}
+footer .newsletter form input,
+footer .newsletter form button {
+  padding: 5px 10px;
+}
+footer .footer-message {
+  padding-top: 15px;
+  border-top: 2px solid brown;
+  text-align: center;
+  font-weight: 400;
+}
+.top {
+  background-color: brown;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 20;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 100%;
+  cursor: pointer;
+}
